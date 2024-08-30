@@ -1,11 +1,6 @@
-<html>
-    <head>
-    </head>
-    <body>
-        {% for tarea in tareas %}
-        <p>Título: {{ tarea.titulo }}</p>
-        <p>{{ tarea.descripcion}}</p>
-        <p>{{ tarea.estado}}</p>
-        {% endfor %}
-    </body>
-</html>
+{% for tarea in tareas %}
+<p>Título: {{ tarea.titulo }}</p>
+<p>{{ tarea.descripcion}}</p>
+<p>{{ tarea.estado}}</p>
+{% endfor %}
+<a href="crear">Crear nueva tarea</a>
