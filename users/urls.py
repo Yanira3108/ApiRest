@@ -1,7 +1,9 @@
-from django.urls import path
-from.views import *
+from django.urls import path, include 
+from.views import TareaViewSet
+from rest_framework import routers 
+router = routers.DefaultRouter()
+router.register(r'tareas',TareaViewSet)
 
 urlpatterns = [
-    path('',listar,name='listar'),
-    path('crear',crear,name='crear'),
+    path('',include(router.urls))
 ]
